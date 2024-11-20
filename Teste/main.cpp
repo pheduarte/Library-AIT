@@ -13,7 +13,7 @@
 int main(int argc, const char * argv[]) {
     
     
-    Book shelf[6];      //initializing an array of 5 books
+    Book shelf[6];      //initializing an array of 6 books
     
     //book 1
     shelf[0].title = "Pride and Prejudice";
@@ -61,20 +61,16 @@ int main(int argc, const char * argv[]) {
         
         if(selection == 1) {
             for(int i = 0; i < 5; i++) {                        //loop "shelf" to display the book available
-//                cout << "Title: " << shelf[i].title << endl;
-//                cout << "Author: " << shelf[i].author << endl;
-//                cout << "ISBN: " << shelf[i].ISBN << endl;
-//                cout << "Availability: " << shelf[i].availability << endl;
                 shelf[i].displayBookDetails();
-                
             };
+            
             cout << "Please type the ISBN of the book you would like to borrow" << endl;
             
             int ISBN;
             cin >> ISBN;
             
             shelf[ISBN-1].borrowBook();
-            cout << "You have selected book " << shelf[ISBN-1].title << endl;
+            cout << "You have selected the book " << shelf[ISBN-1].title << endl;
             selection = -1;
             
             cout << " " << endl;
@@ -165,6 +161,9 @@ int main(int argc, const char * argv[]) {
     eBook newEbook;
     newEbook.title = "Harry Potter";
     newEbook.displayBookDetails();
+    
+    
+   
     
     return 0;
 }
