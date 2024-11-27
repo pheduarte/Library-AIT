@@ -9,4 +9,6 @@
 
 class eBook : public Book {
     int endOfLicenceDate;
+    string category;
 };
+
